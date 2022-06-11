@@ -10,21 +10,18 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
 
-
-  <script src="js/jquery.js"></script>
-
-
   <script src="js/popper.js"></script>
-
 
   <script src="js/bundle.js"></script>
 
+  <script src="js/jquery.js"></script>
+
+  <script src="js/js.js"></script>
 
 </head>
 <div class="contenedorGral">
 
   <body>
-
 
     <header class="header">
       <ul class="nav justify-content-center;" style="justify-content: space-between;">
@@ -84,7 +81,38 @@
           </div>
         </div>
       </section>
+
+
+      <!-- Ventana de ERROR -->
+   <!--    <div class="modal_wrap">
+        <div class="mensaje_modal">
+          <h3>Existen errores:</h3>
+          <p>Escriba un nombre</p>
+          <p>Ingrese un correo</p>
+          <p>El campo mensaje no puede estar vacio.</p>
+          <span id="btnClose">Cerrar</span>
+        </div>
+      </div> -->
+
       <section>
+        <form action="/enviar.php" method="post" class="form_contact">
+          <h2>Envia un mensaje</h2>
+          <div class="user_info">
+            <label for="names">Nombre *</label>
+            <input type="text" id="names" name="nombre" required>
+            <label for="phone">Telefono / Celular</label>
+            <input type="text" id="phone" name="telefono" >
+            <label for="email">Correo electronico *</label>
+            <input type="text" id="email" name="correo" required>
+
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+
+            <input type="submit" value="Enviar mensaje" id="btnSend">
+
+          </div>
+        </form>
+
         <img src="/img/tech.jpeg" class="img-fluid" alt="">
       </section>
 
