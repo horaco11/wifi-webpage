@@ -10,10 +10,10 @@ $mensaje = $_POST['mensaje'];
 $destinatario = "hnansaldi@gmail.com";
 $asunto = "Contacto desde Web";
 
-$carta = "De: + $nombre \n";
-$carta .= "Correo: + $correo \n";
-$carta .= "Telefono: + $telefono \n";
-$carta .= "Mensaje: + $mensaje";
+$carta = "De: $nombre \n";
+$carta .= "Correo: $correo \n";
+$carta .= "Telefono: $telefono \n";
+$carta .= "Mensaje: $mensaje";
 
 //Enviando el mensaje / correo===================================
 mail($destinatario, $asunto, $carta);
